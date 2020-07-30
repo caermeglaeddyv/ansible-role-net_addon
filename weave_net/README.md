@@ -1,4 +1,4 @@
-Weave Net
+Ansible role: Weave Net
 =========
 
 This role is child role of net_addon and used to install and configure weave-net.
