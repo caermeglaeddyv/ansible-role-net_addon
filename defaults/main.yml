@@ -1,0 +1,6 @@
+---
+# defaults file for roles/net_addon
+
+# The name of network addon that will be installed,
+# role with this name for chosen addon will be loaded and executed:
+net_addon_name: weave-net

@@ -1,0 +1,20 @@
+---
+# defaults file for roles/net_addon/weave_net
+
+
+# Deployment type of weave-net:
+weave_net_deployment_type: with_k8s
+
+# Variable which is common for most projects, used in
+# configuration files or file/directory names.
+# By default used as reference for weave_net_project_dir variable:
+weave_net_project_name: test
+
+# Variable which is common for most projects, used as
+# project working directory on the localhost for the role.
+# Currently is used for creating weave-net workdir, creating secret files,
+# downloading kubernetes manifests, copying or creating symlink to kube config etc.:
+weave_net_project_dir: files/{{ weave_net_project_name }}
+
+# If encryption via secret must enabled between peers:
+weave_net_encryption: no

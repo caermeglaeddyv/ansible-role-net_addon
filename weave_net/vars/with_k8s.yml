@@ -1,0 +1,6 @@
+---
+# Kubernetes version to use in weave-net installation:
+weave_net_k8s_version: 1.14.10
+
+# Environment variables of weave-net:
+weave_net_env: ""         # "&env.KEY1=value1&env.KEY2=value2"

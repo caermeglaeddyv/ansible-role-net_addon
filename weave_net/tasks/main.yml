@@ -1,0 +1,23 @@
+---
+# tasks file for roles/net_addon/weave_net
+- name: open firewall ports for weave_net
+  firewalld:
+    immediate: yes
+    permanent: yes
+    port: "{{ item }}"
+    state: enabled
+  with_items:
+  - 6783/tcp
+  - 6783/udp
+  - 6784/udp
+
+- name: create weave-net directory
+  file:
+    path: "{{ weave_net_project_dir }}/weave-net"
+    state: directory
+  delegate_to: localhost
+  connection: local
+  run_once: true
+  become: no
+
+- import_tasks: "{{ weave_net_deployment_type }}.yml"
