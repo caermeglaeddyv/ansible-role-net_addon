@@ -4,7 +4,7 @@
 
 - name: create weave-net secret file and kubernetes secret
   shell: |
-    /bin/openssl rand -base64 32 > $ANSIBLE_WEAVE_NET_WORKDIR/weave-passwd
+    /bin/openssl rand -base64 32 > $ANSIBLE_WEAVE_NET_WORKDIR/weave-passwd \
     && kubectl create secret -n kube-system generic weave-passwd \
     --from-file=$ANSIBLE_WEAVE_NET_WORKDIR/weave-passwd
   environment:
