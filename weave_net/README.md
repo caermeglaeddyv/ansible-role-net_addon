@@ -44,7 +44,7 @@ weave_net_project_name: test
 weave_net_project_dir: files/{{ weave_net_project_name }}
 
 # If encryption via secret must enabled between peers:
-weave_net_encryption: no
+weave_net_encryption: false
 
 ```
 
