@@ -32,7 +32,7 @@ Variables and their descriptions copied from defaults/main.yml
 # Deployment type of weave-net:
 weave_net_deployment_type: with_k8s
 
-# Variable which is common for most projects, used in 
+# Variable which is common for most projects, used in
 # configuration files or file/directory names.
 # By default used as reference for weave_net_project_dir variable:
 weave_net_project_name: test
@@ -45,12 +45,6 @@ weave_net_project_dir: files/{{ weave_net_project_name }}
 
 # If encryption via secret must enabled between peers:
 weave_net_encryption: false
-
-```
-
-Variables and their descriptions copied from vars/with_k8s.yml
-
-```bash
 
 # Kubernetes version to use in weave-net installation:
 weave_net_k8s_version: 1.14.10
