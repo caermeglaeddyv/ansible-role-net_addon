@@ -1,7 +1,4 @@
 ---
-- name: include vars specific to k8s deployment type
-  include_vars: "{{ weave_net_deployment_type }}.yml"
-
 - name: create weave-net secret file and kubernetes secret
   shell: |
     /bin/openssl rand -base64 32 > $ANSIBLE_WEAVE_NET_WORKDIR/weave-passwd \
