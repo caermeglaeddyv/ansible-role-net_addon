@@ -18,6 +18,6 @@ galaxy_info:
   - weaveworks
 
 dependencies:
-- role: net_addon/weave_net
+- role: caermeglaeddyv.net_addon/weave_net
   when:
   - net_addon_name == 'weave-net'
